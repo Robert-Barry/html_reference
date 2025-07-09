@@ -1,13 +1,48 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>HTML Refernce</title>
+        <title>HTML Reference</title>
     </head>
     <body>
         <h1>HTML Reference</h1>
-        <p>A website that provides a reference for HTML elements. It does not include any CSS so that the elements can be seen exactly as the browser renders them.</p>
-        <h2>A subheading</h2>
-        <p>Another paragraph with text.</p>
+        <p>A website that provides a reference for HTML elements. It does not include any CSS so that the elements can be 
+            seen exactly as the browser renders them.</p>
+        <h2>The Document Object Model or DOM</h2>
+        <p>A tree structure of HTML objects created by the web browser. Each object in the <i>Dom tree</i> is called a <i>node</i>.</p>
+        <h2>Tags and Attributes</h2>
+        <p>Keywords between &lt;&gt; are called <i>HTML tags</i> and are used to describe the content.</p>
+        <p><i>HTML attributes</i> offer additional information about the content of the <i>HTMLL tags</i> and are formatted as name-value pairs, 
+            such as <code>name="value"</code>.</p>
+        <h2>HTML comments</h2>
+        <p>HTML comments are created using the following code:</p>
+        <p><code>&lt;!-- This is a comment --&gt;</code></p>
+        <h2>HTML Document Framework</h2>
+        <p>The following is a simplified HTML framework for creating an HTML document.</p>
+        <p>
+            <code>
+                &lt;!doctype html&gt;<br>
+                &lt;html&gt;<br>
+                    &nbsp;&nbsp;&lt;head&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br>
+                    &nbsp;&nbsp;&lt;/head&gt;<br>
+                    &nbsp;&nbsp;&lt;body&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- visible content --&gt;<br>
+                    &nbsp;&nbsp;&lt;/body&gt;<br>
+                &lt;/html&gt;
+            </code>
+        </p>
+        <h2>HTML Document Type</h2>
+        <p><code>&lt;!doctype html&gt;</code> - Must be the first declaration of an HTML document before <code>&lt;html&gt;</code>.<br>
+        A document type isn't an HTML tag, but instructs the webpage which HTML version is being used.</p>
+        <h2>The &lt;html&gt; element</h2>
+        <p><code>&lt;html&gt;&lt;/html&gt;</code> - The root element of every HTML file. Informs the browser that this is an HTML document.<br>
+        Only <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> are allowed as children of the <code>&lt;html&gt;</code> tag.</p>
+        <h2>The &lt;head&gt; element</h2>
+        <p><code>&lt;head&gt;</code> - Elements between the head tags are not displayed in the web browser, but provides information specific<br>
+        to the browser and to search engines.</p>
+        <h2>The &lt;body&gt; element</h2>
+        <p><code>&lt;body&gt;&lt;/body&gt;</code> - The visible content of an HTML file.</p>
     </body>
 </html>

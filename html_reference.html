@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>HTML Reference</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="A web page for referencing HTML tags and attributes.">
     </head>
     <body>
         <h1>HTML Reference</h1>
@@ -45,12 +47,59 @@
         <h2>&lt;head&gt; elements</h2>
         <p><code>&lt;title&gt;...&lt;/title&gt;</code> - Must be included. Contains the title of the HTML document.</p>
         <p><code>&lt;base&gt;</code> -  Sets the base URLs/targest for all relative URLs in a web page. <i>href</i> and <i>target</i> attributes are required.<br></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;<i>href</i> -  defines the base URL. Used by the web rowser as the base address for relative or absolute paths.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<i>target</i> - Specifies the target window in which the link target should be displayed: <i>_self, _blank, _parent, _top</i></p>
+        <h3>Attributes:</h3>
+        <ul>
+            <li><i>href</i> -  defines the base URL. Used by the web rowser as the base address for relative or absolute paths.</li>
+            <li><i>target</i> - Specifies the target window in which the link target should be displayed: <i>_self, _blank, _parent, _top</i></li>
+        </ul>
         <p><code>&lt;link&gt;</code> - Sets logical links of the HTML document to other files to be included.</p>
-        <p><code>&lt;style&gt;</code> - Sets the local stylesheet rules for the HTML document.</p>
-        <p><code>&lt;script&gt;</code> -  Integrates the client-side scripts.</p>
+        <h3>Attributes:</h3>
+        <ul>
+        <li><i>href</i> - Specifies the URL to the resource to be linked.</li>
+        <li><i>hreflang</i> - The language of the resource to be linked.</li>
+        <li><i>media</i> - The medium or device for which the target resource in <i>href</i> has been optimized.</li>
+        <li><i>rel</i> - The relation of the external resource to the current document</li>
+            <ul>
+                <li><i>alternate</i> - Links to an alternative presentation form of the current page.</li>
+                <li><i>author</i> - Links to another page with info about the author of the current document.</li>
+                <li><i>archives</i> - Links to a previous version of certain documents.</li>
+                <li><i>help</i> - Links to a help document.</li>
+                <li><i>icon</i> - Allows the assignment of a favivon to the web page.</li>
+                <li><i>license</i> - Links to the usage rights for the content of the current page.</li>
+                <li><i>next, prev</i> - Creates a link from the current page to the next or previous page.</li>
+                <li><i>prefetch</i> - Links to an external web page that is loaded into cache before hand.</li>
+                <li><i>pingback</i> - Specifies the website of a pingback server.</li>
+                <li><i>search</i> - Links the current document to another document where a search across the whole website is possible.</li>
+                <li><i>stylesheet</i> - Links to an external CSS file.</li>
+                <li><i>tag</i> - A linked resource that applies to the current document.</li>
+            </ul>
+        <li><i>size</i> -  Specifies the size of the resouce to be linked.</li>
+        <li><i>type</i> - Speicifies the MIME type for the document to link to.</li>
+        </ul>
+        <p><code>&lt;style&gt;</code> - Sets the local stylesheet rules for the HTML document.<br>
+        <h3>Attributes:</h3>
+        <ul>
+            <li><i>media</i> - Which medium/device the target resource in href has been opyimized for.</li>
+            <li><i>type</i> - Specifies the MIME type for the stylesheet.</li>
+        </ul>
+        <p><code>&lt;script&gt;</code> -  Integrates the client-side scripts. Must have an opening and closing <code>&lt;script&gt;</code> tag, even when linking to an external document.<br>
+        <b>&nbsp;&nbsp;&nbsp;&nbsp;Example:</b> <code>&lt;script type="text/javascript" src="script.js"&gt;&lt;/script&gt;</code></p>
+        <h3>Attributes:</h3>
+        <ul>
+            <li><i>async</i> - Execute the script asynchronusly with the HTML document. External scripts only.</li>
+            <li><i>charset</i> - Sets the encoding for the external script.</li>
+            <li><i>defer</i> - Parses the HTML first before the script. External scripts only.</li>
+            <li><i>src</i> - Specifies the URL to the external script.</li>
+            <li><i>type</i> - Specifies the MIME type of the script, usually <code>text/javascript.</code></li>
+        </ul>
         <p><code>&lt;meta&gt;</code> - Sets the metadata such as keywords, descriptions, or the character set for the HTML document.</p>
+        <h3>Attributes:</h3>
+        <ul>
+            <li><i>name/content</i> - A name value pair of any information: <code>&lt;meta name="author" content="John Doe"&gt;</code></li>
+            <li><i>http-equiv/content</i> - Intended for communication with a web browser: <code>&lt;meta http-equiv="refresh" content="5"&gt;</code></li>
+            <li><i>charset</i> -  Specifies the character encoding.</li>
+        </ul>
+        <p>Viewport - <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"&gt;</code> - tells the browser to use the width of the device. Used to adapt to different device sizes.`  </p>
         <h2>The &lt;body&gt; element</h2>
         <p><code>&lt;body&gt;&lt;/body&gt;</code> - The visible content of an HTML file.</p>
     </body>

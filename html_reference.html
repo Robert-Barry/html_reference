@@ -115,5 +115,45 @@
             <li><code>&lt;footer&gt;</code> - The footer of the content.</li>
             <li><code>&lt;address&gt;</code> - Contact information such as a street address.</li>
         </ul>
+
+        <h2>Elements for Structuring Text</h2>
+        <p><code>&lt;p&gt;</code> - Paragraph tag. Common for displaying text.</p>
+        <p><code>&lt;br&gt;</code> -  A line break in the text.<br>
+            For example: <code>&lt;p&gt;Hello&lt;br&gt;there!&lt;/p&gt;</code><br>
+            Appears as:</p>
+            <p>Hello<br>there!</p>
+        <p><code>&lt;wbr&gt;</code> -  Optional line break within a word. (alternatively use &amp;shy;)</p>
+        <p><code>&lt;hr&gt;</code> - Topic based separation at the paragraph level.<br>
+        For example: <code>&lt;p&gt;Topic 1&lt;hr&gt;Topic 2&lt;/p&gt;</code><br>
+        Appears as:</p>
+        <p>Topic 1</p><hr><p>Topic 2</p>
+    <p><code>&lt;blockquote&gt;</code> -  Citation as a text paragraph.<br>
+        For example: &lt;blockquote&gt;Lorem ipsum dolor sit amet&lt;/blockquote&gt;<br>
+        Appears as:</p>
+        <blockquote>Lorem ipsum dolor sit amet.</blockquote>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>cite</i> - Specifies the source of the citation: <code>&lt;blockquote cite="www.fake-quotes.com"&gt;</code></li>
+    </ul>
+    <p><code>&lt;div&gt;</code> - Defines a general section of the document.</p>
+    <p><code>&lt;main&gt;</code> -  The main content of the web page. Occurs only once in a document. Not a section element, only a grouping eleemnt.</p>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>hidden</i> -  Hides the main element and allows for multiple <code>&lt;main&gt;</code> elements as long as only 1 appears at a time.</li>
+    </ul>
+    <p><code>&lt;figure&gt;</code> - Grouping or summarizing content for separate description.</p>
+    <p><code>&lt;figcaption&gt;</code> - Labeling content grouped via the <code>figure</code> element.</p>
+    <p><code>&lt;ul&gt;</code> - Creates and unordered list.</p>
+    <p><code>&lt;ol&gt;</code> - Creates an ordered list.</p>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>reversed</i> - reverses the number ordering of an ordered list: <code>&lt;ol reversed="reversed"&gt;</code>.</li>
+        <li><i>start</i> - Changes the starting numbe rof an ordered list: <code>&lt;ol start="3"&gt;</code></li>
+        <li><i>value</i> -  Used in the <code>&lt;li&gt;</code> element of an ordered list to change the number of a list item: <code>&lt;li value="5"&gt;</code></li>
+    </ul>
+    <p><code>&lt;li&gt;</code> - A list element. Part of <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>.</p>
+    <p><code>&lt;dl&gt;</code> - The root elemnt for a description list.</p>
+    <p><code>&lt;dt&gt;</code> - The term being described.</p>
+    <p><code>&lt;dd&gt;</code> - The description of the term.</p>
     </body>
 </html>

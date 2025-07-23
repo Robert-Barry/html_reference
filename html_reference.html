@@ -155,5 +155,289 @@
     <p><code>&lt;dl&gt;</code> - The root elemnt for a description list.</p>
     <p><code>&lt;dt&gt;</code> - The term being described.</p>
     <p><code>&lt;dd&gt;</code> - The description of the term.</p>
+    <h2>Text Markup</h2>
+    <ul>
+        <li><code>&lt;abbr&gt;</code> - Abbreviations or acronyms. Example: <code>&lt;abbr title="world wide web"&gt;WWW&lt;/abbr&gt;</code></li>
+        <li><code>&lt;cite;&gt;</code> - Where the source is from. Used to mark up the working title of a book, movie, painting, etc.</li>
+        <li><code>&lt;code&gt;</code> - Computer code within a paragraph.</li>
+        <li><code>&lt;pre&gt;</code> - Preformatted text deisplaying all spaces and line breaks.</li>
+        <li><code>&lt;kbd&gt;</code> - Keyboard input.</li>
+        <li><code>&lt;samp&gt;</code> - Screen output of a program.</li>
+        <li><code>&lt;dfn&gt;</code> - Defining a term. Should mark-up the term itself.</li>
+        <li><code>&lt;var&gt;</code> - A variable.</li>
+        <li><code>&lt;bdo&gt;</code> - Change the text direction for bidirectional text.</li>
+        <li><code>&lt;bdi&gt;</code> - Defining a section for bidirectional text.</li>
+        <li><code>&lt;em&gt;</code> - Highlighting text that would be emphasized in spoken language.</li>
+        <li><code>&lt;strong&gt;</code> - Highlighting important words and passages.</li>
+        <li><code>&lt;i&gt;</code> - Words that technical terms, thoughts, or foreign words.</li>
+        <li><code>&lt;b&gt;</code> - Meningful names or keywords.</li>
+        <li><code>&lt;mark&gt;</code> - Highlighting text with a marker.</li>
+        <li><code>&lt;q&gt;</code> - Words or passages as cited or spoken text.</li>
+        <li><code>&lt;u&gt;</code> - Text underlined as a proper name or incorrect words or passages.</li>
+        <li><code>&lt;s&gt;</code> - Text that is no longer valid.</li>
+        <li><code>&lt;ins&gt;</code> -  Newly added or revised text.</li>
+        <li><code>&lt;del&gt;</code> - Deleted text.</li>
+        <li><code>&lt;sub&gt;</code> -  Subscript.</li>
+        <li><code>&lt;sup&gt;</code> -  Superscript.</li>
+        <li><code>&lt;time&gt;</code> - Dates and times.Use the <code>datetime</code> attirubte for machine readable date and time: <code>&lt;time datetime="2025-12-20&gt;December 20, 2025&lt;/time&gt;</code></li>
+        <li><code>&lt;small&gt;</code> - Small print.</li>
+        <li><code>&lt;ruby&gt;</code>, <code>&lt;rp&gt;</code>, <code>&lt;rt&gt;</code> -  Ruby annotations.</li>
+        <li><code>&lt;span&gt;</code> - General section with a paragraph of text.</li>
+    </ul>
+    <h2>Tables</h2>
+    <ul>
+        <li><code>&lt;table&gt;</code> - A root of a table.</li>
+        <li><code>&lt;tr&gt;</code> - The row of a table.</li>
+        <li><code>&lt;td&gt;</code> - A table cell.</li>
+        <li><code>&lt;th&gt;</code> - A table cell for a heading.</li>
+        <li><code>&lt;thead&gt;</code> - The table header area.</li>
+        <li><code>&lt;tbody&gt;</code> - The body of the table.</li>
+        <li><code>&lt;tfoot&gt;</code> - The footer of the table.</li>
+        <li><code>&lt;colgroup&gt;</code> - A group of table columns.</li>
+        <li><code>&lt;col&gt;</code> - A table column.</li>
+        <li><code>&lt;caption&gt;</code> - A table header or legend.</li>
+    </ul>
+    <t3>An HTNL table example:</t3>
+    <pre>
+    <code>
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Heading 1&lt;/th&gt;
+            &lt;th&gt;Heading 2&lt;/th&gt;
+            &lt;th&gt;Heading 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;table&gt;     
+    </code>
+    </pre>
+    <h3>Results:</h3>
+    <table>
+        <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+    </table>
+    <h3>"colspan" and "rowspan"</h3>
+    <p>Use <code>colspan</code> to group columns, <code>rowspan</code> to group rows:</p>
+    <pre>
+    <code>
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Heading 1&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Heading 2&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Heading 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Row 1&lt;/th&gt;
+            &lt;td colspan=&quot;2&quot;&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Row 2&lt;/th&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td colspan=&quot;2&quot;&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Row 3&lt;/th&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;table&gt;     
+    </code>
+    </pre>
+    <h3>Results:</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">Heading 1</th>
+            <th scope="col">Heading 2</th>
+            <th scope="col">Heading 3</th>
+        </tr>
+        <tr>
+            <th scope="row">Row 1</th>
+            <td colspan="2">Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <th scope="row">Row 2</th>
+            <td>Cell 1</td>
+            <td colspan="2">Cell 2</td>
+        </tr>
+        <tr>
+            <th scope="row">Row 3</th>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+    </table>
+    <h3>"thead", "tbody", and "tfoot</h3>
+    <p>These elements are used to represent each section of a table:</p>
+    <pre>
+    <code>
+    &lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Heading 1&lt;/th&gt;
+            &lt;th&gt;Heading 2&lt;/th&gt;
+            &lt;th&gt;Heading 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Foot 1&lt;/th&gt;
+            &lt;th&gt;Foot 2&lt;/th&gt;
+            &lt;th&gt;Foot 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;table&gt;     
+    </code>
+    </pre>
+    <h3>Results:</h3>
+    <table>
+    <thead>
+        <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Foot 1</th>
+            <th>Foot 2</th>
+            <th>Foot 3</th>
+        </tr>
+    </tfoot>
+    </table>
+    <h3><code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code> and <code>&lt;caption&gt;</code></h3>
+    <p>Use <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> to group together columns, usually for css:</p>
+    <p>Use <code>&lt;caption&gt;</code> to display a caption for the table.</p>
+    <p>Enclose a table in the <code>&lt;figure&gt;</code> element to use <code>&lt;figcaption&gt;</code> for the bottom of a table.</p>
+    <pre>
+    <code>
+    &lt;table&gt;
+    &lt;caption&gt;This is a caption for the table&lt;/caption&gt;
+    &lt;colgroup&gt;
+        &lt;col span=&quot;2&quot;&gt;
+        &lt;col&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Heading 1&lt;/th&gt;
+            &lt;th&gt;Heading 2&lt;/th&gt;
+            &lt;th&gt;Heading 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;td&gt;Cell 3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Foot 1&lt;/th&gt;
+            &lt;th&gt;Foot 2&lt;/th&gt;
+            &lt;th&gt;Foot 3&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;table&gt;     
+    </code>
+    </pre>
+    <table>
+    <caption>This is a caption for the table</caption>
+    <colgroup>
+        <col span="2" style="background-color: lightgray;">
+        <col style="background-color: rgb(233, 233, 233);">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Foot 1</th>
+            <th>Foot 2</th>
+            <th>Foot 3</th>
+        </tr>
+    </tfoot>
+    </table>
     </body>
 </html>

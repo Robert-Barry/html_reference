@@ -439,5 +439,150 @@
         </tr>
     </tfoot>
     </table>
+    <h2>Hyperlinks using &lt;a&gt;</h2>
+    <p>Creates links to subpages on your site or links to other website.</p>
+    <h3>Example:</h3>
+    <pre>
+        <code>
+    &lt;a href=&quot;#&quot;&gt;This is a link&lt;/a&gt;
+        </code>
+    </pre>
+    <h3>Result</h3>
+    <a href="#">This is a link</a>
+    <h3>Target attribute</h3>
+    <p>The <i>target</i> attribute specifies in which winow the link will be opened.<br>
+    Valid values of target are <i>_self, _blank, _parent, _top</i>.</p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;a target=&quot;_blank&quot; href=&quot;https://example.com/&quot;&gt;Example.com&lt;/a&gt;
+        </code>
+    </pre>
+    <h3>Result</h3>
+    <a target="_blank" href="https://example.com">Example.com</a>
+    <h2>Graphics & Multimedia</h2>
+    <ul>
+        <li><code>&lt;img&gt;</code> - A graphic file in HTML.</li>
+        <li><code>&lt;map&gt;, &lt;area&gt;</code> - A link-sensitive graphic.</li>
+        <li><code>&lt;picture&gt;, &lt;source&gt;</code> - Load an image from several image sources.</li>
+        <li><code>&lt;svg&gt;</code> - A scalable vector graphic.</li>
+        <li><code>&lt;math&gt;</code> - A formula written with MathML.</li>
+        <li><code>&lt;canvas&gt;</code> - A canvas used for drawing graphics.</li>
+        <li><code>&lt;video&gt;</code> - Video files without plugins.</li>
+        <li><code>&lt;audio&gt;</code> - Audio files without plugins.</li>
+        <li><code>&lt;embed&gt;, &lt;object&gt;, &lt;iframe&gt;</code> - A way to embed active elements.</li>
+    </ul>
+
+    <h3><code>&lt;img&gt;</code> Element</h3>
+    <p>The <code>&lt;img&gt;</code> element inserts a graophic at the position in which the <code>&lt;img&gt;</code> element is placed. The attributes <i>src</i> and <i>alt</i> must be present.<br>
+    <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> are often used with images by enclosing them in &lt;figure&gt;.</p>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>src</i> - The source of the image file.</li>
+        <li><i>alt</i> - An alternative description of an image file.</li>
+        <li><i>title</i> - A global attribute that sometimes makes sens to include, such as if the image is a link.</li>
+        <li><i>height</i> - Used to specify the height of an image.</li>
+        <li><i>width</i> - Used to specify the width of an image.</li>
+        <li><i>ismap</i> - Used if the images are server-side image maps.</li>
+        <li><i>usemap</i> - Specifies the name of the image map to be associated with the image.</li>
+    </ul>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;p&gt;
+        &lt;img src=&quot;images/example.jpg&quot; alt=&quot;An example image&quot;&gt;
+        &lt;img src=&quot;images/example2.jpg&quot; alt=&quot;Another example image&quot;&gt;
+    &lt;p&gt; 
+        </code>
+    </pre>
+    <h3>Image Maps</h3>
+    <p>Image maps are just links embedded within a graphic. It's a way to make a graphic have multiple links in one image.</p>
+    <ul>
+        <li><code>&lt;img&gt;</code> - The graphic in a map element with an anchor.</li>
+        <li><code>&lt;map&gt;</code> - The area for the link-sensitive graphic.</li>
+        <li><code>&lt;area&gt;</code> - Defines a clickable area in an image.</li>
+    </ul>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;p&gt;
+        &lt;img src=&quot;images/image.jpg&quot; alt=&quot;A linked image&quot; usemap=&quot;#map&quot;&gt;
+    &lt;/p&gt;
+    &lt;map name=&quot;map&quot;&gt;
+        &lt;area shape=&quot;rect&quot; coords=&quot;0, 0, 100, 100&quot; href=&quot;exmaple.html&quot; alt=&quot;example&quot; title=&quot;Example&quot;&gt;
+        &lt;area shape=&quot;rect&quot; coords=&quot;0, 100, 100, 100&quot; href=&quot;exmaple2.html&quot; alt=&quot;example2&quot; title=&quot;Example2&quot;&gt;
+    &lt;/map&gt;
+        </code>
+    </pre>
+    <h2><code>&lt;picture&gt;</code></h2>
+    <p>Provides a suitable image for all display sizes.</p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;picture&gt;
+        &lt;source media=&quot;(min-width: 1024px)&quot; srcset=&quot;images/example-1024.jpg&quot;&gt;
+        &lt;source media=&quot;(min-width: 640px)&quot; srcset=&quot;images/example-640.jpg&quot;&gt;
+        &lt;source media=&quot;(min-width: 480px)&quot; srcset=&quot;images/example-480.jpg&quot;&gt;
+        &lt;!-- Fallback for older browsers --&gt;
+        &lt;img src=&quot;images/example-480.jpg&gt; alt=&quot;An example image&quot;&gt;
+    &lt;/picture&gt;
+        </code>
+    </pre>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>srcset</i> - The media source to be loaded.</li>
+        <li><i>media</i> - The media query for the source to be loaded. Can only be used in the <code>&lt;picture&gt;</code> element.</li>
+        <li><i>type</i> - The MIME type to which the linked file belongs.</li>
+        <li><i>sizes</i> - The width or pixel density at which the image should be displayed.</li>
+    </ul>
+    <h2>Favicons</h2>
+    <p>Added to the site through the <code>&lt;link&gt;</code> element in the header with the attribute <code>rel=&quot;icon&quot;</code>.<br>
+    The size is ususally 16 x 16, sometimes 32 x 32. The images should be saved with the <i>.ico format.</i></p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;imaghes/favicon.ico&quot;&gt;
+    &lt;!-- For mobile devices --&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; sizes=&quot;180x180&quot; href=&quot;imaghes/favicon180.png&quot;&gt;
+        </code>
+    </pre>
+    <h2>Vector Graphics</h2>
+    <p>Use <i>scalable vector graphics (SVG)</i> to display vector images. It can be added using the <code>&lt;imhage&gt;</code> tag.</p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;p&gt;
+        &lt;img src=&quot;vector/vector.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;A vector image&quot;&gt;
+    &lt;/p&gt;
+        </code>
+    </pre>
+    <p>SVG can also be directlt embedded into the webpage. The child elements of SVG must use XML rules, including a closing / on empty elements.</p>
+    <pre>
+        <code>
+    &lt;p&gt;
+        &lt;svg width=&quot;300&quot; height=&quot;100&quot;&gt;
+            &lt;ellipse ry=&quot;45&quot; rx=&quot;140&quot; cy=&quot;50&quot; cx=&quot;150&quot; fill=&quot;red&quot; stroke-width=&quot;10&quot; strok=&quot;black&quot;&gt;
+            &lt;text text-anchor=&quot;middle&quot; font-size=&quot;60&quot; y=&quot;67&quot; x=&quot;150&quot; fill=&quot;black&quot;&gt;SVG&lt;/text&gt;
+        &lt;/svg&gt;
+    &lt;/p&gt;
+        </code>
+    </pre>
+    <h3>Results</h3>
+    <p>
+        <svg width="300" height="100">
+            <ellipse ry="45" rx="140" cy="50" cx="150" fill="red" stroke-width="10" stroke="black" />
+            <text text-anchor="middle" font-size="60" y="67" x="150" fill="black">SVG</text>
+        </svg>
+    </p>
+    <h3>SVG Elements</h3>
+    <ul>
+        <li><code>&lt;path/&lt;</code> - A line described by various combinations of elliptic arcs, quadtratic and cubic curves, and distances.</li>
+        <li><code>&lt;circle/&lt;</code> -  Defines a circle.</li>
+        <li><code>&lt;ellipse/&lt;</code> -  Defines an ellipse.</li>
+        <li><code>&lt;rect/&lt;</code> - Defines a rectangle.</li>
+        <li><code>&lt;line/&lt;</code> - Defines a straight line.</li>
+        <li><code>&lt;polygon/&lt;</code> - Describes a polygon.</li>
+        <li><code>&lt;text&lt;&lt;/text&gt;</code> - Defines a text in the SVG.</li>
+    </ul>
     </body>
 </html>

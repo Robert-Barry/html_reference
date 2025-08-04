@@ -197,7 +197,7 @@
         <li><code>&lt;col&gt;</code> - A table column.</li>
         <li><code>&lt;caption&gt;</code> - A table header or legend.</li>
     </ul>
-    <t3>An HTNL table example:</t3>
+    <h3>An HTML table example:</h3>
     <pre>
     <code>
     &lt;table&gt;
@@ -583,6 +583,95 @@
         <li><code>&lt;line/&lt;</code> - Defines a straight line.</li>
         <li><code>&lt;polygon/&lt;</code> - Describes a polygon.</li>
         <li><code>&lt;text&lt;&lt;/text&gt;</code> - Defines a text in the SVG.</li>
+    </ul>
+    <h2>The <code>&lt;canvas&gt;</code> Element</h2>
+    <p>A space in an HTML document where graphics can be drawn using JavaScript. It must include an <i>id</i>, <i>height</i>, and <i>width</i> attribute.</p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;canvas id=&quot;aCanvas&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;
+        Canvas not supported on this browser
+    &lt;/canvas&gt;
+        </code>
+    </pre>
+    <h2>The &lt;video&gt; and &lt;audio&gt; Elements</h2>
+    <p>The <code>&lt;video&gt;</code> element is used to show a video on a web page. It supports MP4, OGG, and WebM, although Ogg and WebM may not be supoprted in Safari or Microsoft Edge.<br>
+    The <code>&lt;audio&gt;</code> element is very similar to the <code>&lt;video&gt;</code> element and many of the same rules apply.</p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;video witdh=&quot;720&quot; src=&quot;example.mp4&quot; controls autoplay&gt;
+        The video tag is not supported on this browser
+    &lt;/video&gt;
+        </code>
+    </pre>
+    <p>Alternative video sources can be made available by using the <code>&lt;source&gt;</code> tag:</p>
+    <pre>
+        <code>
+    &lt;video witdh=&quot;720&quot; controls autoplay&gt;
+        &lt;source src=&quot;example.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;source src=&quot;example.webm&quot; type=&quot;video/webm&quot;&gt;
+        &lt;source src=&quot;example.ogg&quot; type=&quot;video/ogg&quot;&gt;
+        The video tag is not supported on this browser
+    &lt;/video&gt;
+        </code>
+    </pre>
+    <p>Use the <code>&lt;track&gt;</code> tag to include subtitles using the WebVTT format.</p>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>autoplay</i> - Starts the videos after it is loaded.</li>
+        <li><i>controls</i> - Displays controls for a video.</li>
+        <li><i>height</i> - Video height.</li>
+        <li><i>width</i> - Video width.</li>
+        <li><i>loop</i> - Plays the video on a continuous loop.</li>
+        <li><i>muted</i> - Plays the video without sound.</li>
+        <li><i>poster</i> - Specifies how the video should be loaded.</li>
+        <li><i>src</i> - The URL of the video file.</li>
+        <li><i>type</i> -  Specifies the video format.</li>
+    </ul>
+    <h3>The &lt;embed&gt;, &lt;object&gt;, and &lt;iframe&gt; Elements</h3>
+    <p>Use these tags to embed non-standard content in the HTML. &lt;embed&gt; and &lt;object&gt; can be used for many of the same content. Prefer &lt;object&gt; over &lt;embed&gt;.</p>
+    <ul>
+        <li><code>&lt;embed&gt;</code> - Enables the integration of an object in the HTML document.</li>
+        <li><code>&lt;object&gt;</code> - Inlcude active content in the HTML document that isn't supported by the web browser directly, but via extensions.</li>
+        <li><code>&lt;iframe&gt;</code> - Mainly used to embed external HTML documents.</li>
+    </ul>
+    <h2>Forms</h2>
+    <p>The following tags are used to create forms online.</p>
+    <ul>
+        <li><code>&lt;form&gt;</code> - Defines a form.</li>
+        <li><code>&lt;fieldset&gt;</code> - Groups together form elements.</li>
+        <li><code>&lt;legend&gt;</code> - Defines a heading for a fieldset.</li>
+        <li><code>&lt;label&gt;</code> - Adds and links a text label to form elements.</li>
+        <li><code>&lt;datalist&gt;</code> - Provides a list of option values that can be used as a suggestion list.</li>
+        <li><code>&lt;input&gt;</code> - Requests data from the user.</li>
+        <li><code>&lt;button&gt;</code> - Defines a clickable button to trigger actions.</li>
+        <li><code>&lt;select&gt;</code> - Initiates a selection list with entries using the option <code>&lt;option&gt;</code> element.</li>
+        <li><code>&lt;optgroup&gt;</code> -  Groups options into a selection list.</li>
+        <li><code>&lt;option&gt;</code> - An entry of a selection or dropdown list.</li>
+        <li><code>&lt;textarea&gt;</code> - An area for entering multiline text.</li>
+        <li><code>&lt;output&gt;</code> - An area for outputting values.</li>
+        <li><code>&lt;meter&gt;</code> - Visualizes the size of a value.</li>
+        <li><code>&lt;details&gt;</code>, <code>&lt;summary&gt;</code> - Expands and collapses page content.</li>
+        <li><code>&lt;dialog&gt;</code> - Displays a dialog box.</li>
+    </ul>
+    <h3>The &lt;form&gt; Element</h3>
+    <p>The <code>&lt;form&gt; encloses HTML form elements. Everything between the opening and closing tga is part of the form.</code></p>
+    <h3>Example</h3>
+    <pre>
+        <code>
+    &lt;form action=&quot;example.php&quot; method=&quot;post&quot;&gt;
+        &lt;!-- Form elements here --&gt;
+    &lt;/form&gt;
+        </code>
+    </pre>
+    <h3>Attributes</h3>
+    <ul>
+        <li><i>action</i> - The URL that is called when the form is submitted.</li>
+        <li><i>method</i> - The HTTP request method for transmitting the data.</li>
+        <li><i>enctype</i> -  Specifies how the form data should be encoded.</li>
+        <li><i>acctep-charset</i> - Specifies the character encoding used to sen the data.</li>
+        <li><i>target</i> - The target window where the web server outputs the results.</li>
     </ul>
     </body>
 </html>

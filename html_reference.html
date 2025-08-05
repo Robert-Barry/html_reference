@@ -673,5 +673,112 @@
         <li><i>acctep-charset</i> - Specifies the character encoding used to sen the data.</li>
         <li><i>target</i> - The target window where the web server outputs the results.</li>
     </ul>
+    <h3>Input Fields</h3>
+    <h4>&lt;input&gt;</h4>
+    <p>Displays a single-line text field where users can enter. Use the attribute <i>type=text</i> for text data.<br>
+    Use the attibute <i>name</i> as an identifier for the field. Use <i>value</i> for a preset text value.</p>
+    <h4>Example</h4>
+    <pre>
+        <code>
+    &lt;form&gt;
+        First name:
+        &lt;input type=&quot;text&quot; name=&quot;fName&quot; size=&quot;28&quot; maxlength=&quot;30&quot;&gt;
+        </code>
+    </pre>
+    <h4>Result:</h4>
+    <form>
+        First name:
+        <input type="text" name="fName" size="28" maxlength="30">
+    </form>
+    <p>Use <i>type=&quot;password&gt; for password fields.</i></p>
+    <h4>&lt;textarea&gt;</h4>
+    <p>A text field that allows for a multiline message. Use the <i>name</i> attrobute as an identifier.</p>
+    <h4>Example</h4>
+    <pre>
+        <code>
+    &lt;form&gt;
+        Message:
+        &lt;textarea name=&quot;text&quot; rows=&quot;10&quot; cols=&quot;40&quot; maxlength=&quot;1000&quot;&gt;
+            Enter the message here:
+        &lt;/textarea&gt;
+        </code>
+    </pre>
+    <h4>Result:</h4>
+    <form>
+        Message:
+        <textarea name="text" rows="10" cols="40" maxlength="1000">
+            Enter the message here:
+        </textarea>
+    </form>
+    <h4>Selection and Dropdown Lists</h4>
+    <p>Use <code>&lt;select&gt; to create a selection list or dropdown list.</code></p>
+    <h4>Example</h4>
+    <pre>
+        <code>
+    &lt;form&gt;
+        &lt;p&gt;Selection list:&lt;br&gt;
+            &lt;select name=&quot;select1&quot;&gt;
+                &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+                &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+                &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+                &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p&gt;Selection list 2:&lt;br&gt;
+            &lt;select multiple name=&quot;select2&quot; size=&quot;4&quot;&gt;
+                &lt;option value=&quot;A&quot;&gt;Option A&lt;/option&gt;
+                &lt;option value=&quot;B&quot;&gt;Option B&lt;/option&gt;
+                &lt;option value=&quot;C&quot;&gt;Option C&lt;/option&gt;
+                &lt;option value=&quot;D&quot;&gt;Option D&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p&gt;Selection list 3:&lt;br&gt;
+            &lt;select multiple name=&quot;select3&quot; size=&quot;6&quot;&gt;
+                &lt;optgroup label=&quot;group1&quot;&gt;
+                    &lt;option value=&quot;A1&quot;&gt;Option A1&lt;/option&gt;
+                    &lt;option value=&quot;B1&quot;&gt;Option B1&lt;/option&gt;
+                &lt;/optgroup&gt;
+                &lt;optgroup label=&quot;group2&quot;&gt;
+                    &lt;option value=&quot;C1&quot;&gt;Option C1&lt;/option&gt;
+                    &lt;option value=&quot;D1&quot;&gt;Option D1&lt;/option&gt;
+                &lt;/optgroup&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+    &lt;/form&gt;
+        </code>
+    </pre>
+    <h4>Result:</h4>
+    <form>
+        <p>Selection list:<br>
+            <select name="select1">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+        </p>
+        <p>Selection list 2:<br>
+            <select multiple name="select2" size="4">
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+                <option value="C">Option C</option>
+                <option value="D">Option D</option>
+            </select>
+        </p>
+        <p>Selection list 3:<br>
+            <select multiple name="select3" size="6">
+                <optgroup label="group1">
+                    <option value="A1">Option A1</option>
+                    <option value="B1">Option B1</option>
+                </optgroup>
+                <optgroup label="group2">
+                    <option value="C1">Option C1</option>
+                    <option value="D1">Option D1</option>
+                </optgroup>
+            </select>
+        </p>
+    </form>
+    <p>The <i>size</i> attribute sets how many options will be visible. Use <i>selected</i> to pre-select an option. The <i>multiple</i> attribute allows<br>
+    choosing multiple options by holding down <i>Ctrl</i> or <i>Shift</i>.</p>
     </body>
 </html>
